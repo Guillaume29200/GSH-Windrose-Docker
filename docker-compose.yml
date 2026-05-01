@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  windrose:
+    image: slymer29/gsh-windrose:latest
+    ports:
+      - "7777:7777/udp"
+      - "7777:7777/tcp"
+    volumes:
+      - ./data/server:/opt/games/server
+      - ./data/config:/opt/games/config
+      - ./data/wine:/opt/wine
+      - ./data/steam:/opt/steam
